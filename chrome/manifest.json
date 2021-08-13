@@ -59,9 +59,9 @@
 	"description": "User trade interface enhancements for the online game Pardus",
 	"manifest_version": 2,
 	"minimum_chrome_version": "61",
-	"name": "Pardus Bookkeeper",
+	"name": "Pardus Bookkeeper Continued",
 	"permissions": [ "notifications", "storage", "*://*.pardus.at/*" ],
-	"version": "3.1",
+	"version": "3.1.1",
 	"browser_action": {
 		"default_icon": {
 			"16": "icons/16.png",
