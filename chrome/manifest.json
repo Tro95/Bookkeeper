@@ -61,7 +61,7 @@
 	"minimum_chrome_version": "61",
 	"name": "Pardus Bookkeeper Continued",
 	"permissions": [ "notifications", "storage", "*://*.pardus.at/*" ],
-	"version": "3.1.2",
+	"version": "3.1.3",
 	"browser_action": {
 		"default_icon": {
 			"16": "icons/16.png",
