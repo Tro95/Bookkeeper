@@ -378,7 +378,7 @@ function updateBuilding( storeItems, building, callback ) {
 		building.setUpkeep( pageData.upkeep );
 		building.setProduction( pageData.production );
 		
-		if (building.typeId == 17) { // MO. We basically redo our upkeep/ticksleft based on the entered grid strength, 15 at default.
+		if (building.typeId == 17) { // MO. We basically redo our upkeep/ticksleft based on the entered grid strength, 0 at default.
 			if (!document.getElementById( 'bookkeeper-grid' )) 
 				buildMODOM( building );
 			
@@ -490,7 +490,7 @@ function buildMODOM( building ) {
 	gridInput.type = 'textarea';
 	gridInput.size = '1';
 	gridInput.id = 'bookkeeper-grid';
-	building.level ? gridInput.value = building.level : gridInput.value = 15;
+	building.level ? gridInput.value = building.level : gridInput.value = 0;
 	td.setAttribute( 'colspan', '4' );
 	td.setAttribute( 'align', 'right' );
 	td.appendChild( gridInput );

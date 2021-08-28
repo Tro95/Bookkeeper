@@ -351,7 +351,7 @@ var COLUMN_SPECS = {
 		header: simpleHeader('Lvl'), //this.options.psbFlag ? simpleHeader( 'population') : simpleHeader( 'Lvl' ),
 		cell: rCell( function( b ) { 
 					let rvalue = '?';
-					b.level ? rvalue = b.level.toLocaleString( 'en' ) : null; 
+					!isNaN(b.level) ? rvalue = b.level.toLocaleString( 'en' ) : null; 
 					return rvalue 
 					} ),
 		sortId: 'level',
