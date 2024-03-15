@@ -424,10 +424,10 @@ var COLUMN_SPECS = {
 				return 0;
 			}
 			if (isNaN(aTicks)) {
-				return -1;
+				return 1;
 			}
 			if (isNaN(bTicks)) {
-				return 1;
+				return -1;
 			}
 			return aTicks - bTicks;
 		}
