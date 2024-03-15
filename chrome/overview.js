@@ -412,10 +412,24 @@ var COLUMN_SPECS = {
 				td.classList.add( 'red' );
 			else if ( n === 1 )
 				td.classList.add( 'yellow' );
+			else if ( isNaN(n) ) {
+				td.textContent = '';
+			}
 		},
 		sortId: 'tick',
 		sort: function( a, b ) {
-			return a.getTicksLeft() - b.getTicksLeft();
+			const aTicks = a.getTicksLeft();
+			const bTicks = b.getTicksLeft();
+			if (isNaN(aTicks) && isNaN(bTicks)) {
+				return 0;
+			}
+			if (isNaN(aTicks)) {
+				return -1;
+			}
+			if (isNaN(bTicks)) {
+				return 1;
+			}
+			return aTicks - bTicks;
 		}
 	},
 
